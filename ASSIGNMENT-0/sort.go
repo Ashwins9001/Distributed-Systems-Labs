@@ -23,16 +23,16 @@ func main() {
 	input = strings.TrimSuffix(input, "\n")
 	input = strings.TrimSuffix(input, "\r")
 
-	//Open file for reading and go line by line using the scanner 
+	//Open file for reading and go line by line using the scanner
 	var file, fileError = os.Open(input)
-	
+
 	if fileError != nil {
 		fmt.Println("Error opening file", fileError)
 	}
-	
+
 	defer file.Close()
 
-	//Create scanner to read file line by line 
+	//Create scanner to read file line by line
 	scanner := bufio.NewScanner(file)
 
 	//Create empty slice to append to; use slice as opposed to array because it is resizeable
@@ -48,16 +48,16 @@ func main() {
 		//Find ith array element and initialize pointer, j, to previous element that decrements to sort elements
 		currentElement := inputCollection[i]
 		j := i - 1
-		
+
 		//While in array bounds and while the ith element is smaller than a previous element, push the previous element to the right to make space
 		//In effect have put larger, unsorted elements ahead, in the proper spot
-		for j >= 0 && currentElement < inputCollection[j]{
-			inputCollection[j + 1] = inputCollection[j]
+		for j >= 0 && currentElement < inputCollection[j] {
+			inputCollection[j+1] = inputCollection[j]
 			j -= 1
 		}
-		
+
 		//Once an element smaller than the ith element is found, then it is in the correct position, then place element using the j-pointer
-		inputCollection[j + 1] = currentElement
+		inputCollection[j+1] = currentElement
 	}
 
 	//Write the sorted slice to a file
