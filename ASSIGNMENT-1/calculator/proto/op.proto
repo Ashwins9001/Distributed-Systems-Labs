@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option go_package = "proto/op.proto;op_proto"; // Don't forget to change!
+
+package op;
+
+// The greeting service definition.
+service Operation {
+	// Sends a greeting
+    	rpc DoOp (OpRequest) returns (OpReply) {}
+}
+
+// The request message containing the user's name.
+message OpRequest {
+    	string op = 1;
+	string num1 = 2;
+	string num2 = 3;
+}
+
+// The response message containing the greetings
+message OpReply {
+    string message = 1;
+}

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "proto/bank.proto;bank_proto"; 
+
+package bank;
+
+service BankOperation {
+    // Sends a greeting
+    rpc DoBankOp (BankRequest) returns (BankReply) {}
+}
+
+message BankRequest {
+    string acc = 1;
+    string op = 2;
+    string amt = 3;
+}
+
+message BankReply {
+    string message = 1;
+}

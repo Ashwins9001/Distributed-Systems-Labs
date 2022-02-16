@@ -1,0 +1,4 @@
+add 3 5
+sub 8 5
+mul 4 3
+div 10 5
