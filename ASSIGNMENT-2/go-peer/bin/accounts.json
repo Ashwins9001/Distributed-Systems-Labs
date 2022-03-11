@@ -1,0 +1,7 @@
+[
+
+  {"Name":"Fred","AccountID":12345,"Balance":250.20},
+  {"Name":"Alfred","AccountID":23456,"Balance":350.20},
+  {"Name":"John","AccountID":34567,"Balance":385.15},
+  {"Name":"Tommy","AccountID":45678,"Balance":931.42}
+]

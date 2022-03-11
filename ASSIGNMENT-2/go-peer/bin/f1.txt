@@ -1,0 +1,4 @@
+deposit 12345 100
+withdraw 12345 50
+interest 45678 3
+done

@@ -1,0 +1,5 @@
+deposit 34567 100
+interest 34567 100
+deposit 45678 300
+withdraw 45678 50.5
+done

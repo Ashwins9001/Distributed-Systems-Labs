@@ -1,0 +1,19 @@
+syntax = "proto3";
+package bankservice;
+
+
+option go_package = "proto/bankservice.proto;bankservice_proto";
+
+service BankService {
+	rpc DoTransaction (TransactionRequest) returns (TransactionReply) {}
+}
+
+message TransactionRequest {
+	string message = 1;
+	float timestamp = 2;
+	int64 id = 3;
+}
+
+message TransactionReply {
+	string message = 1;
+}
