@@ -2,7 +2,7 @@
 Labs covering algorithms for distributed systems using Golang:
 - Lab 0: Introduction to Golang
 - Lab 1: Using gRPC to transfer client-server data (simulate bank account & calculator operations)
-- Lab 2: Creating peer-to-peer system to perform bank transactions using total-ordering on N nodes (replicas) and to output transaction log at end; formulated using gRPC & Consul API for service discovery
+- Lab 2: Creating peer-to-peer system to perform bank transactions using total-ordering on N nodes (replicas) and to output transaction log at end; formulated using gRPC for network communication/data transfer & Consul API for service discovery to easily encapsulate all replicas on same network
                                  
 ### Lab 1: File Structure
     .
